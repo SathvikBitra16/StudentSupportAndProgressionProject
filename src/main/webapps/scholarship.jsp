@@ -174,6 +174,21 @@
         #upload-fields{
           display: none;
         }
+        
+        .homebtn{
+          padding: 16px;
+          border-radius: 10px;
+          font-size: 20px;
+          position: relative;
+          bottom: 100px;
+          left:5px;
+          background-color: #E87E6A;
+        }
+        
+        .homebtn:hover{
+  		  border-color: #E87E6A;
+     	  transition: .5s;
+		}
     </style>
   </head>
   <body>
@@ -185,25 +200,7 @@
             This table serves as an organized repository of scholarship data, allowing for efficient tracking and analysis of financial aid distribution. It helps in understanding the allocation of resources, the diversity of scholarship recipients, and the correlation between academic performance and financial support.
             </p>
         </div>
-        <div class="container mt-5" id="cont1">
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link" href="homePage.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="studentAdmission.jsp">Student Admissions</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Scholarships</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Fee Structure</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Results</a>
-            </li>
-            </ul>
-        </div>
+        <input class="homebtn" type="button" value="Home" onclick="home()"/>
     </header>
     <h3><span style="color: #cb6652;">Details about Student's</span> <span style="color: rgb(49, 176, 234);">Scholorships based on given data.</span></h3>
     <form action="http://localhost:8080/MiniProject/scholarship" method="post">
@@ -313,5 +310,11 @@
 			out.println("</script>");	
 		}
 	 %> 
+	 
+	 <script type="text/javascript">
+	 	function home(){
+	 		window.open('homePage.html',"_self");
+	 	}
+	 </script>
   </body>
 </html>

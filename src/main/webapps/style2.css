@@ -25,8 +25,8 @@
 body{
     min-height: 100vh;
     transition: var(--tran-05);
-    background-image: url("vvit-blur.png");
-    height: 100%; 
+    background-image: url("vvitdrone.png");
+    height: 100%;
     background-repeat: no-repeat;
     background-size: 1530px 1000px;
     background-color: #E87E6A;
@@ -86,6 +86,7 @@ body{
 	position: relative;
 	left:100px;
 	top:200px;
+	margin-top: 40px;
 	color: #80ffff;
 	font-size:18px;
 }
@@ -435,3 +436,6 @@ body.dark .home .text{
     color: var(--text-color);
 }
 
+#maps{
+	text-decoration: none;
+}

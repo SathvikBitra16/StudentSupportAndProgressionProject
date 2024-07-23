@@ -217,6 +217,21 @@
           display: none;
         }
         
+        .homebtn{
+          padding: 16px;
+          border-radius: 10px;
+          font-size: 20px;
+          position: relative;
+          bottom: 100px;
+          left:5px;
+          background-color: #E87E6A;
+        }
+        
+        .homebtn:hover{
+  		  border-color: #E87E6A;
+     	  transition: .5s;
+		}
+        
     </style>
   </head>
   <body>
@@ -227,25 +242,7 @@
             <p class="para1"><span>&#8226;</span> All Admissions are provisional and subject to rules and regulations prescribed by the Government of Andhra Pradesh from time to time. The admission of any candidate even if made, will be cancelled if such admission is found to be made contrary to the above referred rules and regulations at any time. In such cases, the candidate shall not have any claim whatsoever in any manner.<br><br>
             </p>
         </div>
-        <div class="container mt-5" id="cont1">
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link" href="homePage.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Student Admissions</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="scholarship.jsp">Scholarships</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Fee Structure</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Results</a>
-            </li>
-            </ul>
-        </div>
+        <input class="homebtn" type="button" value="Home" onclick="home()"/>
     </header>
     <h3><span style="color: #cb6652;">Details about Student</span> <span style="color: rgb(49, 176, 234);">Admissions based on given data.</span></h3>
     <form action="http://localhost:8080/MiniProject/admission" method="post">
@@ -423,6 +420,11 @@
 		}
 	 %> 
 	 
+	 <script type="text/javascript">
+	 	function home(){
+	 		window.open('homePage.html',"_self");
+	 	}
+	 </script>
     
     
 	

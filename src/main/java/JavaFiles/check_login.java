@@ -22,7 +22,7 @@ public class check_login extends HttpServlet{
 			Connection con = DBConnect.connect();
 			String uname = request.getParameter("uname");
 			String pass = request.getParameter("pwd");
-			PreparedStatement st = con.prepareStatement("select uname,password from users where uname=? and password=?");
+			PreparedStatement st = con.prepareStatement("select username,password from logins where username=? and password=?");
 			st.setString(1, uname);
 			st.setString(2, pass);
 			HttpSession session = request.getSession();
@@ -31,7 +31,7 @@ public class check_login extends HttpServlet{
 			PrintWriter out = response.getWriter();
 			if(rs.next()) {
 				request.setAttribute("status", "success");
-				session.setAttribute("name",rs.getString("uname"));
+				session.setAttribute("name",rs.getString("username"));
 				out.println("<script>");
 				out.println("alert('Congrats, Logged in Successfully');");
 				out.println("window.open('homePage.html','_self');");

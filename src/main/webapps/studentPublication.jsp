@@ -158,12 +158,17 @@
         .year{
           position: relative;
           top: 200px;
-          left: 330px;
+          left: 30px;
         }
         .branch{
           position: relative;
           top: 149px;
-          left: 750px;
+          left: 560px;
+        }
+        .pdf{
+          position: relative;
+          top: 110px;
+          left: 900px;
         }
         
         #upload-btn{
@@ -175,6 +180,21 @@
         #upload-fields{
           display: none;
         }
+        
+        .homebtn{
+          padding: 16px;
+          border-radius: 10px;
+          font-size: 20px;
+          position: relative;
+          bottom: 100px;
+          left:5px;
+          background-color: #E87E6A;
+        }
+        
+        .homebtn:hover{
+  		  border-color: #E87E6A;
+     	  transition: .5s;
+		}
     </style>
   </head>
   <body>
@@ -187,25 +207,7 @@
     	     Join us in celebrating the power of student expression and the boundless creativity that defines our academic community.
     	</p>
         </div>
-        <div class="container mt-5" id="cont1">
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link" href="homePage.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="studentAdmission.jsp">Student Admissions</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="scholarship.jsp">Scholarships</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Fee Structure</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Results</a>
-            </li>
-            </ul>
-        </div>
+        <input class="homebtn" type="button" value="Home" onclick="home()"/>
     </header>
     <div class="container mt-5">
     	<h1 class="head1">Student Publications of VVIT</h1>
@@ -303,6 +305,7 @@
 		        <option value="MECH">MECH</option>
 		      </select>
 		    </div>
+		    
 		 <button type="submit" id="upload-btn" class="btn btn-outline-vvit">Insert Data</button>
 	 	</div>
 	 </form>
@@ -315,5 +318,12 @@
 			out.println("</script>");	
 		}
 	 %> 
+	 
+	 <script type="text/javascript">
+	 	function home(){
+	 		window.open('homePage.html',"_self");
+	 	}
+	 </script>
+	 
       </body>
 </html>

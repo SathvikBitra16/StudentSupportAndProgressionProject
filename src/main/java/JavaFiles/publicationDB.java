@@ -46,9 +46,9 @@ public class publicationDB extends HttpServlet{
 			int i=0;
 			//RequestDispatcher dispatcher = null;
 			ResultSet rs=st.executeQuery();
-			if(rs.next()) {
+			if(rs.isBeforeFirst()) {
 				request.setAttribute("status", "success");
-				out.println("<html><head><style>table{position: relative;left:60px;}p{position: relative;left:540px;top: 0px;font-size: 30px;}");
+				out.println("<html><head><style>table{position: relative;}p{position: relative;left:540px;top: 0px;font-size: 30px;}");
 				out.println("#btn{background-color: #83a4d4;color: black;border: 1px solid black;font-size: 20px;padding: 24px;border-radius: 8px;}");
 				out.println("img{width: 100px;height: 70px;position: relative;left: 1240px;top: -100px}");
 				out.println("body{background-image: linear-gradient(to right, #b6fbff, #83a4d4);font-family: 'Trebuchet MS', sans-serif;overflow-x: hidden;}</style></body>");
@@ -57,7 +57,7 @@ public class publicationDB extends HttpServlet{
 				out.println("<p>The Selected Student data </p>");
 				out.println("<img src='logo.png'");
 			    out.println("<hr>");
-				out.println("</br><table cellspacing='0' cellpadding='5' border='1'>");
+				out.println("</br><center><table cellspacing='0' cellpadding='5' border='1'>");
 				out.println("<tr>");
 				out.println("<th>S.No.</th>");
 				out.println("<th>Roll No.</th>");
@@ -102,7 +102,7 @@ public class publicationDB extends HttpServlet{
 					
 					out.println("</tr>");
 				}
-				out.println("</table><br><hr>");
+				out.println("</table></center><br><hr>");
 				out.println("<script>");
 				out.println("document.getElementById('btn').addEventListener('click', () => {history.back();});");
 				out.println("</script></body></html>");

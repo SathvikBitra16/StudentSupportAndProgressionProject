@@ -61,7 +61,7 @@
         .head1{
           position: relative;
           top: -28px;
-          left: 260px;
+          left: 160px;
         }
         #inf{
           font-size: 21px;
@@ -140,26 +140,23 @@
           top: 100px;
           left: 160px;
         }
-        .host{
-          position: relative;
-          top: 160px;
-          left: 80px;
-        }
+        
         .year{
           position: relative;
           top: 125px;
-          left: 417px;
+          left: 197px;
         }
         .branch{
           position: relative;
           top: 75px;
-          left: 760px;
+          left: 540px;
         }
-        .type{
-          position: relative;
-          top: 20px;
-          left: 1020px;
-        }
+        
+        .audi{
+		  position: relative;
+		  top: 170px;
+		  left: 810px;
+		}
         #upload-btn{
           position: relative;
           top: 200px;
@@ -171,9 +168,23 @@
         }
         #btn1{
           position: relative;
-          left: -130px;
+          left: -230px;
+        }
+        .homebtn{
+          padding: 16px;
+          border-radius: 10px;
+          font-size: 20px;
+          position: relative;
+          bottom: 100px;
+          left:5px;
+          background-color: #E87E6A;
         }
         
+        .homebtn:hover{
+  		  border-color: #E87E6A;
+     	  transition: .5s;
+		}
+		
     </style>
   </head>
   <body>
@@ -183,28 +194,10 @@
             <img class="logo-img" src="logo.png">
             <p class="para1"><span>&#8226;</span> Explore Your Future: Our career guidance section is designed to empower students on their journey to success. Discover a wealth of resources to help you make informed decisions about your professional path. From personalized career assessments and expert advice to internship opportunities and networking events, we provide the tools and support you need to navigate the world of work with confidence</p>
         </div>
-        <div class="container mt-5" id="cont1">
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link" href="homePage.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="studentAdmission.jsp">Student Admissions</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="scholarship.jsp">Scholarships</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Fee Structure</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Results</a>
-            </li>
-            </ul>
-        </div>
+        <input class="homebtn" type="button" value="Home" onclick="home()"/>
     </header>
     <div class="container mt-5">
-    	<h1 class="head1">Guest Lectures for Faculty of VVIT</h1>
+    	<h1 class="head1">Guest Lectures and Workshops for Students of VVIT</h1>
       <p id="inf"><span>&#8226;</span> Delve into the dynamic world of Information Technology through our curated series of guest lectures from the academic year 2016-17.
     	 This exclusive table highlights a spectrum of renowned industry experts, thought leaders, and professionals who graced our campus to share their invaluable insights with faculty. 
     	 Gain a deeper understanding of the ever-evolving IT landscape and enrich your academic journey by accessing the wealth of knowledge imparted by these esteemed speakers.
@@ -240,11 +233,12 @@
 	      </select>
 	    </div>
 	    <div class="type-dropdown">
-	      <label>Lecture Type : </label>
+	      <label>Target Audience : </label>
 	      <select class="type1" name="type">
 	        <option value="ALL">All</option>
-	        <option value="External">External</option>
-	        <option value="Internal">Internal</option>
+	        <option value="2nd year students">2nd year students</option>
+	        <option value="3rd year students">3rd year students</option>
+	        <option value="4th year students">4th year students</option>
 	      </select>
 	    </div>
 	    <button type="submit" id="btn1" class="btn btn-outline-vvit">Fetch Result</button>
@@ -255,14 +249,14 @@
     
     <form action="http://localhost:8080/MiniProject/uploadLectures" method="post">
     <div class="container mt-5" id="upload-fields">
-    	<h3 class="upload-data">Enter the Publication details to upload</h3>
+    	<h3 class="upload-data">Enter the Guest Lecture details to upload</h3>
     	
 	    	<div class="fname">
-			  <label>Faculty Name : </label>
+			  <label>Resource Persons : </label>
 			  <input type="text" name="fname"/>
 			</div>
 			<div class="proname">
-			  <label>Programme Name : </label>
+			  <label>Title : </label>
 			  <input type="text" name="pname"/>
 			</div>
 			
@@ -270,9 +264,9 @@
 			  <label>Dates : </label>
 			  <input type="text" name="sdate"/>
 			</div>
-			<div class="host">
-			  <label>Host : </label>
-			  <input type="text" name="shost"/>
+			<div class="audi">
+			  <label>Target Audience : </label>
+			  <input type="text" name="taudi"/>
 			</div>
 			<div class="year">
 		      <label>Academic Year : </label>
@@ -302,13 +296,7 @@
 		        <option value="MECH">MECH</option>
 		      </select>
 		    </div>
-		    <div class="type">
-		      <label>Type : </label>
-		      <select class="type1" name="stype">
-		        <option value="External">External</option>
-		        <option value="Internal">Internal</option>
-		      </select>
-		    </div>
+		    
 		 <button type="submit" id="upload-btn" class="btn btn-outline-vvit">Insert Data</button>
 	 	</div>
 	 </form>
@@ -321,6 +309,10 @@
 			out.println("</script>");	
 		}
 	 %> 
-    
+    <script type="text/javascript">
+	 	function home(){
+	 		window.open('homePage.html',"_self");
+	 	}
+	 </script>
   </body>
 </html>

@@ -36,10 +36,9 @@ if(session.getAttribute("name")!=null){
           <span></span>
           <label>Password</label>
         </div>
-        <div class="pass"><a href="http://localhost:8080/MiniProject/forgotPass.jsp">Forgot Password?</a></div>
+        <!-- <div class="pass"><a href="http://localhost:8080/MiniProject/forgotPass.jsp">Forgot Password?</a></div> -->
         <input type="submit" value="Login">
         <div class="signup_link">
-          Not a user? <a href="#">Signup</a>
         </div>
       </form>
     </div>
