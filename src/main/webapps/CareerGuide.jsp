@@ -144,23 +144,23 @@
         .year{
           position: relative;
           top: 125px;
-          left: 197px;
+          left: 82px;
         }
         .branch{
           position: relative;
           top: 75px;
-          left: 540px;
+          left: 515px;
         }
         
         .audi{
 		  position: relative;
 		  top: 170px;
-		  left: 810px;
+		  left: 820px;
 		}
         #upload-btn{
           position: relative;
           top: 200px;
-          left: 580px;
+          left: 530px;
         }
         
         #upload-fields{
@@ -168,10 +168,22 @@
         }
         #btn1{
           position: relative;
-          left: -230px;
+          left: 530px;
         }
         .homebtn{
-          padding: 16px;
+          margin-top: 10px;
+		  width: 10%;
+		  height: 50px;
+		  border-radius: 10px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  font-weight: 500;
+		  gap: 10px;
+		  border: 1px solid #ededef;
+		  background-color: white;
+		  cursor: pointer;
+		  transition: 0.2s ease-in-out;
           border-radius: 10px;
           font-size: 20px;
           position: relative;
@@ -183,6 +195,32 @@
         .homebtn:hover{
   		  border-color: #E87E6A;
      	  transition: .5s;
+		}
+		
+		footer{
+		  margin-bottom: 240px;
+		}
+		
+		.btn {
+		  margin-top: 10px;
+		  width: 20%;
+		  height: 50px;
+		  border-radius: 10px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  font-weight: 500;
+		  gap: 10px;
+		  border: 1px solid #ededef;
+		  background-color: white;
+		  cursor: pointer;
+		  transition: 0.2s ease-in-out;
+		  position: relative;
+		  left: 540px;
+		}
+
+		.btn:hover {
+		  border: 1px solid #2d79f3;
 		}
 		
     </style>
@@ -314,5 +352,7 @@
 	 		window.open('homePage.html',"_self");
 	 	}
 	 </script>
+	 <footer>
+	 </footer>
   </body>
 </html>

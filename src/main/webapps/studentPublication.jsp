@@ -163,18 +163,18 @@
         .branch{
           position: relative;
           top: 149px;
-          left: 560px;
+          left: 510px;
         }
         .pdf{
           position: relative;
-          top: 110px;
-          left: 900px;
+          top: 104px;
+          left: 920px;
         }
         
         #upload-btn{
           position: relative;
           top: 200px;
-          left: 580px;
+          left: 540px;
         }
         
         #upload-fields{
@@ -182,7 +182,19 @@
         }
         
         .homebtn{
-          padding: 16px;
+          margin-top: 10px;
+		  width: 10%;
+		  height: 50px;
+		  border-radius: 10px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  font-weight: 500;
+		  gap: 10px;
+		  border: 1px solid #ededef;
+		  background-color: white;
+		  cursor: pointer;
+		  transition: 0.2s ease-in-out;
           border-radius: 10px;
           font-size: 20px;
           position: relative;
@@ -194,6 +206,30 @@
         .homebtn:hover{
   		  border-color: #E87E6A;
      	  transition: .5s;
+		}
+		.btn {
+		  margin-top: 10px;
+		  width: 20%;
+		  height: 50px;
+		  border-radius: 10px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  font-weight: 500;
+		  gap: 10px;
+		  border: 1px solid #ededef;
+		  background-color: white;
+		  cursor: pointer;
+		  transition: 0.2s ease-in-out;
+		  position: relative;
+		  left: 540px;
+		}
+
+		.btn:hover {
+		  border: 1px solid #2d79f3;
+		}
+		footer{
+		  margin-bottom: 240px;
 		}
     </style>
   </head>
@@ -209,6 +245,7 @@
         </div>
         <input class="homebtn" type="button" value="Home" onclick="home()"/>
     </header>
+    
     <div class="container mt-5">
     	<h1 class="head1">Student Publications of VVIT</h1>
     	<p id="p1"><span>&#8226;</span> Select the required year and branch and get the details about Student Publications of VVIT.</p>
@@ -305,7 +342,7 @@
 		        <option value="MECH">MECH</option>
 		      </select>
 		    </div>
-		    
+		    <!-- <input type="file" class="pdf" name="filename" accept="application/pdf" value="Upload"> -->
 		 <button type="submit" id="upload-btn" class="btn btn-outline-vvit">Insert Data</button>
 	 	</div>
 	 </form>
@@ -323,7 +360,8 @@
 	 	function home(){
 	 		window.open('homePage.html',"_self");
 	 	}
-	 </script>
-	 
+	 </script>]
+	 <footer>
+	 </footer>
       </body>
 </html>

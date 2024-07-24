@@ -95,13 +95,16 @@
           top: -160px;
         }
         .btn{
-          position: relative;
-          top: 240px;
-          left: 0px;
-          padding: 20px;
-          margin-bottom: 24px;
           font-size: 18px;
         }
+        
+        #btn1{
+          position: relative;
+          top: 200px;
+          left: 600px;
+          width: 15%;
+        }
+        
         .nav-item .nav-link{
           color: black;
           position: relative;
@@ -152,7 +155,7 @@
         .year{
           position: relative;
           top: 200px;
-          left: 190px;
+          left: 130px;
         }
         .branch{
           position: relative;
@@ -162,13 +165,14 @@
         .type{
           position: relative;
           top: 103px;
-          left: 800px;
+          left: 850px;
         }
         
         #upload-btn{
           position: relative;
           top: 200px;
-          left: 580px;
+          left: 500px;
+          width: 18%;
         }
         
         #upload-fields{
@@ -176,7 +180,19 @@
         }
         
         .homebtn{
-          padding: 16px;
+          margin-top: 10px;
+		  width: 10%;
+		  height: 50px;
+		  border-radius: 10px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  font-weight: 500;
+		  gap: 10px;
+		  border: 1px solid #ededef;
+		  background-color: white;
+		  cursor: pointer;
+		  transition: 0.2s ease-in-out;
           border-radius: 10px;
           font-size: 20px;
           position: relative;
@@ -188,6 +204,30 @@
         .homebtn:hover{
   		  border-color: #E87E6A;
      	  transition: .5s;
+		}
+		.btn {
+		  margin-top: 10px;
+		  width: 20%;
+		  height: 50px;
+		  border-radius: 10px;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  font-weight: 500;
+		  gap: 10px;
+		  border: 1px solid #ededef;
+		  background-color: white;
+		  transition: 0.2s ease-in-out;
+		  position: relative;
+		  left: 540px;
+		}
+
+		.btn:hover {
+		  border: 1px solid #2d79f3;
+		}
+		
+		footer{
+		  margin-bottom: 240px;
 		}
     </style>
   </head>
@@ -302,6 +342,7 @@
 	 	</div>
 	 </form>
 	 
+	 
 	 <%
 		response.setContentType("text/html");
 		if(session.getAttribute("name") != null){
@@ -316,5 +357,7 @@
 	 		window.open('homePage.html',"_self");
 	 	}
 	 </script>
+	 <footer>
+	 </footer>
   </body>
 </html>
