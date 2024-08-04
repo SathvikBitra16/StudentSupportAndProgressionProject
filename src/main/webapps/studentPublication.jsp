@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="css/bootstrap.min.css" rel="stylesheet" >
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="js/bootstrap.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -16,337 +17,188 @@
         body{ 
             overflow-x :hidden; 
         } 
-        .heading{
+        .heading {
             font-size: 48px;
             font-weight: 600;
             color: black;
             position: relative;
-            top: -160px;
-            left: -100px;
+            top: -60px;
+            left: 20px;
         }
-        header{
-          background-color: #cb6652;
-          padding-top: 70px;
-          height: 400px;
-          position: relative;
-          left: 0px;
+        header {
+            background-color: #cb6652;
+            padding-top: 70px;
+            height: 300px;
+            position: relative;
+            left: 0px;
         }
-        
-        .logo-img{
-          width: 200px;
-          height: 160px;
-          position: relative;
-          left: 650px;
-          bottom: -100px;
+        .para1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            position: relative;
+            left: 40px;
+            top: -60px;
         }
-        .para1{
-          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          font-size: 20px;
-          font-weight: 600;
-          position: relative;
-          left: -90px;
-          top: -160px;
+        h3 {
+        	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            position: relative;
+            top: 50px;
+            left: 360px;
         }
-        
-        .nav-item .nav-link{
-          color: black;
-          position: relative;
-          bottom: 58px;
-          left: -120px;
+        .homebtn {
+            margin-top: 10px;
+            width: 10%;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
+            gap: 10px;
+            border: 1px solid #ededef;
+            background-color: white;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            font-size: 20px;
+            background-color: #E87E6A;
+            position: relative;
+            bottom: 40px;
+            left: 10px;
         }
-        label{
-          font-size: 18px;
-          margin-right: 5px;
+        .homebtn:hover {
+            border-color: #E87E6A;
+            transition: .5s;
         }
-        .head1{
-          position: relative;
-          top: -40px;
-          left: 400px;
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
         }
-        #inf{
-          font-size: 21px;
-          padding-top: 24px;
-        }
-        tr,th,td{
-          border: 1px solid black;
-        }
-        .year-dropdown{
-          display: inline;
-          position: relative;
-          top: 100px;
-          left: 350px;
-          padding: 24px;
-        }
-        .branch-dropdown{
-          display: inline;
-          position: relative;
-          top: 100px;
-          left: 410px;
-          padding: 24px;
-        }
-        .year1{
-          font-size: 18px;
-          font-family:'Segoe UI'; 
-          border-radius: 6px;
-          padding: 12px;
-        }
-        label{
-          font-size: 24px;
-          margin-right: 5px;
-        }
-        .branch1{
-          font-size: 18px;
-          font-family:'Segoe UI'; 
-          border-radius: 6px;
-          padding: 12px;
-        }
-        .btn{
-          position: relative;
-          top: 240px;
-          padding: 20px;
-          margin-bottom: 24px;
-          font-size: 18px; 
-        }
-        #p1{
-          font-size: 24px;
-        }
-        .upload-data{
-          padding: 24px;
-          margin-bottom: 200px;
-          margin-top: 40px;
-          position: relative;
-          top: 200px;
-          left: 360px;
-        }
-        
-        .name{
-          display: inline;
-          position: relative;
-          top: 100px;
-          left: 10px;
-        }
-        
-        .stuid{
-          display: inline;
-          position: relative;
-          top: 100px;
-          left: 50px;
-        }
-        .title{
-          display: inline;
-          position: relative;
-          top: 100px;
-          left: 90px;
-        }
-        .jname{
-          position: relative;
-          top: 160px;
-          left: 10px;
-        }
-        .vol{
-          display: inline;
-          position: relative;
-          top: 125px;
-          left: 500px;
-        }
-        .issno{
-          display: inline;
-          position: relative;
-          top: 125px;
-          left: 580px;
-        }
-        .year{
-          position: relative;
-          top: 200px;
-          left: 30px;
-        }
-        .branch{
-          position: relative;
-          top: 149px;
-          left: 510px;
-        }
-        .pdf{
-          position: relative;
-          top: 104px;
-          left: 920px;
-        }
-        
-        #upload-btn{
-          position: relative;
-          top: 200px;
-          left: 540px;
-        }
-        
         #upload-fields{
-          display: none;
+        	display: none;
         }
-        
-        .homebtn{
-          margin-top: 10px;
-		  width: 10%;
-		  height: 50px;
-		  border-radius: 10px;
-		  display: flex;
-		  justify-content: center;
-		  align-items: center;
-		  font-weight: 500;
-		  gap: 10px;
-		  border: 1px solid #ededef;
-		  background-color: white;
-		  cursor: pointer;
-		  transition: 0.2s ease-in-out;
-          border-radius: 10px;
-          font-size: 20px;
-          position: relative;
-          bottom: 100px;
-          left:5px;
-          background-color: #E87E6A;
-        }
-        
-        .homebtn:hover{
-  		  border-color: #E87E6A;
-     	  transition: .5s;
-		}
-		.btn {
-		  margin-top: 10px;
-		  width: 20%;
-		  height: 50px;
-		  border-radius: 10px;
-		  display: flex;
-		  justify-content: center;
-		  align-items: center;
-		  font-weight: 500;
-		  gap: 10px;
-		  border: 1px solid #ededef;
-		  background-color: white;
-		  cursor: pointer;
-		  transition: 0.2s ease-in-out;
-		  position: relative;
-		  left: 540px;
-		}
-
-		.btn:hover {
-		  border: 1px solid #2d79f3;
-		}
-		footer{
-		  margin-bottom: 240px;
-		}
     </style>
   </head>
   <body>
     <header>
-        <div class="container mt-5">
+        <div>
             <span class="heading">Student <span style="color:white;">Publications</span></span>
-            <img class="logo-img" src="logo.png">
             <p class="para1"><span>&#8226;</span> Empowering Voices, Inspiring Minds: Explore our vibrant world of student publications, where creativity, intellect, and expression converge. 
-            Our student publications serve as a dynamic platform for the diverse talents and perspectives within our college community.
-    	     Join us in celebrating the power of student expression and the boundless creativity that defines our academic community.
+            Our student<br> publications serve as a dynamic platform for the diverse talents and perspectives within our college community.
+    	     Join us in celebrating the power of student<br>expression and the boundless creativity that defines our academic community.
     	</p>
         </div>
         <input class="homebtn" type="button" value="Home" onclick="home()"/>
     </header>
-    
-    <div class="container mt-5">
-    	<h1 class="head1">Student Publications of VVIT</h1>
-    	<p id="p1"><span>&#8226;</span> Select the required year and branch and get the details about Student Publications of VVIT.</p>
-    	<form action="http://localhost:8080/MiniProject/publication" method="post">
-	    <div class="year-dropdown">
-	      <label>Academic Year : </label>
-	        <select class="year1" name="year">
-	          <option value="2016-17">2016-17</option>
-	          <option value="2017-18">2017-18</option>
-	          <option value="2018-19">2018-19</option>
-	          <option value="2019-20">2019-20</option>
-	          <option value="2020-21">2020-21</option>
-	          <option value="2021-22">2021-22</option>
-	          <option value="2022-23">2022-23</option>
-	        </select>
-	    </div>
-	    
-	    <div class="branch-dropdown">
-	      <label>Branch : </label>
-	      <select class="branch1" name="branch">
-	        <option value="ALL">All</option>
-	        <option value="AID">AID</option>
-	        <option value="AIM">AIM</option>
-	        <option value="CIC">CIC</option>
-	        <option value="CIV">CIV</option>
-	        <option value="CSE">CSE</option>
-	        <option value="CSM">CSM</option>
-	        <option value="CSO">CSO</option>
-	        <option value="ECE">ECE</option>
-	        <option value="EEE">EEE</option>
-	        <option value="IT">INF</option>
-	        <option value="MEC">MECH</option>
-	      </select>
-	    </div>
-	    
-	    <button type="submit" id="btn1" class="btn btn-outline-vvit">Fetch Result</button>
-    </form>
+    <h3><span style="color: #cb6652;">Details about Student </span> <span style="color: rgb(49, 176, 234);">Publications of VVIT</span></h3>
+    <br><br>
+    <div class="container mt-4 bg-white rounded-lg p-4 shadow-lg">
+        <form style="position: relative; bottom: 20px;" action="http://localhost:8080/MiniProject/publication" method="post" class="mt-4">
+            <div class="flex flex-col space-y-4">
+                <div>
+                    <label class="text-black" for="year">Academic Year</label>
+                    <select class="w-full bg-gray-100 rounded-md border-gray-300 text-black px-2 py-1" name="year">
+                        <option value="2016-17">2016-17</option>
+                        <option value="2017-18">2017-18</option>
+                        <option value="2018-19">2018-19</option>
+                        <option value="2019-20">2019-20</option>
+                        <option value="2020-21">2020-21</option>
+                        <option value="2021-22">2021-22</option>
+                        <option value="2022-23">2022-23</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-black" for="branch">Branch</label>
+                    <select class="w-full bg-gray-100 rounded-md border-gray-300 text-black px-2 py-1" name="branch">
+                        <option value="ALL">All</option>
+                        <option value="AID">AID</option>
+                        <option value="AIM">AIM</option>
+                        <option value="CIC">CIC</option>
+                        <option value="CIV">CIV</option>
+                        <option value="CSE">CSE</option>
+                        <option value="CSM">CSM</option>
+                        <option value="CSO">CSO</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="IT">INF</option>
+                        <option value="MECH">MECH</option>
+                    </select>
+                </div>
+                
+                <button style="width: 40%; position: relative; left: 130px; top: 10px;" class="btn btn-outline-vvit rounded-md px-4 py-2" type="submit">Fetch Result</button>
+            </div>
+        </form>
     </div>
-     <br><br><br>
+    <div id="upload-fields">
+	    <h3 style="position: relative; left:460px;"><span style="color: #cb6652;">Enter the Publication </span> <span style="color: rgb(49, 176, 234);">details to upload</span></h3>
+	    <br><br>
+	    <div class="container mt-4 bg-white rounded-lg p-4 shadow-lg">
+	        <form  style="position: relative; bottom: 20px;" action="http://localhost:8080/MiniProject/uploadPublications" method="post" class="mt-4">
+	            <div class="flex flex-col space-y-4">
+	                <div>
+	                    <label class="text-black" for="stuname">Student Name</label>
+	                    <input class="w-full bg-gray-100 rounded-md border-gray-300 text-black px-2 py-1" type="text" name="stuname"/>
+	                </div>
+	                <div>
+	                    <label class="text-black" for="stuname">Student Roll No.</label>
+	                    <input class="w-full bg-gray-100 rounded-md border-gray-300 text-black px-2 py-1" type="text" name="stunum"/>
+	                </div>
+	                <div>
+	                    <label class="text-black" for="stuname">Title</label>
+	                    <input class="w-full bg-gray-100 rounded-md border-gray-300 text-black px-2 py-1" type="text" name="stutitle"/>
+	                </div>
+	                <div>
+	                    <label class="text-black" for="stuname">Journal name</label>
+	                    <input class="w-full bg-gray-100 rounded-md border-gray-300 text-black px-2 py-1" type="text" name="jouname"/>
+	                </div>
+	                <div>
+	                    <label class="text-black" for="stuname">Volume Issue</label>
+	                    <input class="w-full bg-gray-100 rounded-md border-gray-300 text-black px-2 py-1" type="text" name="volume"/>
+	                </div>
+	                <div>
+	                    <label class="text-black" for="stuname">Issn No.</label>
+	                    <input class="w-full bg-gray-100 rounded-md border-gray-300 text-black px-2 py-1" type="text" name="issnum"/>
+	                </div>
+	                
+	                <div>
+	                    <label class="text-black" for="stuyear">Academic Year</label>
+	                    <select class="w-full bg-gray-100 rounded-md border-gray-300 text-black px-2 py-1" name="stuyear">
+	                        <option value="2016-17">2016-17</option>
+	                        <option value="2017-18">2017-18</option>
+	                        <option value="2018-19">2018-19</option>
+	                        <option value="2019-20">2019-20</option>
+	                        <option value="2020-21">2020-21</option>
+	                        <option value="2021-22">2021-22</option>
+	                        <option value="2022-23">2022-23</option>
+	                    </select>
+	                </div>
+	                
+	                <div>
+	                    <label class="text-black" for="stubranch">Branch</label>
+	                    <select class="w-full bg-gray-100 rounded-md border-gray-300 text-black px-2 py-1" name="stubranch">
+	                        <option value="AID">AID</option>
+	                        <option value="AIM">AIM</option>
+	                        <option value="CIC">CIC</option>
+	                        <option value="CIV">CIV</option>
+	                        <option value="CSE">CSE</option>
+	                        <option value="CSM">CSM</option>
+	                        <option value="CSO">CSO</option>
+	                        <option value="ECE">ECE</option>
+	                        <option value="EEE">EEE</option>
+	                        <option value="IT">INF</option>
+	                        <option value="MECH">MECH</option>
+	                    </select>
+	                </div>
+	                
+	                <button style="width: 40%; position: relative; left: 130px; top: 10px;" class="btn btn-outline-vvit rounded-md px-4 py-2" type="submit">Upload</button>
+	            </div>
+	        </form>
+	    </div>
+    </div>
     
-    <form action="http://localhost:8080/MiniProject/uploadPublications" method="post">
-    <div class="container mt-5" id="upload-fields">
-    	<h3 class="upload-data">Enter the Publication details to upload</h3>
-    	
-	    	<div class="name">
-			  <label>Student Name : </label>
-			  <input type="text" name="stuname"/>
-			</div>
-			<div class="stuid">
-			  <label>Student Roll No. : </label>
-			  <input type="text" name="stunum"/>
-			</div>
-			<div class="title">
-			  <label>Title : </label>
-			  <input type="text" name="stutitle"/>
-			</div>
-			<div class="jname">
-			  <label>Journal name : </label>
-			  <input type="text" name="jouname"/>
-			</div>
-			<div class="vol">
-			  <label>Vol Issue : </label>
-			  <input type="text" name="volume"/>
-			</div>
-			<div class="issno">
-			  <label>Issn No. : </label>
-			  <input type="text" name="issnum"/>
-			</div>
-			<div class="year">
-		      <label>Academic Year : </label>
-		        <select class="year1" name="stuyear">
-		          <option value="2016-17">2016-17</option>
-		          <option value="2017-18">2017-18</option>
-		          <option value="2018-19">2018-19</option>
-		          <option value="2019-20">2019-20</option>
-		          <option value="2020-21">2020-21</option>
-		          <option value="2021-22">2021-22</option>
-		          <option value="2022-23">2022-23</option>
-		        </select>
-		    </div>
-		    <div class="branch">
-		      <label>Branch : </label>
-		      <select class="branch1" name="stubranch">
-		        <option value="AID">AID</option>
-		        <option value="AIM">AIM</option>
-		        <option value="CIC">CIC</option>
-		        <option value="CIV">CIV</option>
-		        <option value="CSE">CSE</option>
-		        <option value="CSM">CSM</option>
-		        <option value="CSO">CSO</option>
-		        <option value="ECE">ECE</option>
-		        <option value="EEE">EEE</option>
-		        <option value="INF">INF</option>
-		        <option value="MECH">MECH</option>
-		      </select>
-		    </div>
-		    <!-- <input type="file" class="pdf" name="filename" accept="application/pdf" value="Upload"> -->
-		 <button type="submit" id="upload-btn" class="btn btn-outline-vvit">Insert Data</button>
-	 	</div>
-	 </form>
-	 
 	 <%
 		response.setContentType("text/html");
 		if(session.getAttribute("name") != null){
